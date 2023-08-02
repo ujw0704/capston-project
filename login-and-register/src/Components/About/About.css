@@ -1,0 +1,18 @@
+.containt ul li{
+    border: 2px solid black;
+    font-weight: bold;
+    height: 150px;
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+ 
+ li{
+    margin: 10px;
+    list-style: none;
+}
+.containt ul {
+    display: flex;
+    
+}
+
