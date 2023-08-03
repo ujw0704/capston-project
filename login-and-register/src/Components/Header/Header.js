@@ -7,13 +7,12 @@ function Header() {
   return (
     <>
       <div className='header'>
-        <div className='logo' style={{ fontStyle: "bold" }}> BOOK<span style={{ color: "green" }}> SHELF </span></div>
+        <div className='logo' style={{ fontStyle: "bold" }}><Link to="/"> BOOK<span style={{ color: "green" }}> SHELF </span></Link></div>
         <form>
           <label for="sreach">search</label>
           <input type="search" name='seach books'></input>
         </form>
-        <ul>
-          <li>
+        <ul> 
           <li id="login">
             <Link to="/login">LOGIN</Link>
           </li>
@@ -26,17 +25,13 @@ function Header() {
            <li id="about">
             <Link to="/about">ABOUT</Link>
           </li>
-          {/* li id="home">
-            <Link to="/div.log">Home</Link> */}
 
-          </li> 
+            
         </ul>
       </div>
     </>
 
-        
-
-
+         
   )
 }
 

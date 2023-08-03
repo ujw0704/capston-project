@@ -7,6 +7,7 @@ import Footer from './Components/Footer/Footer'
 import Register from './Components/Register/Register'
 import About from './Components/About/About';
 
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -17,7 +18,7 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path='/' element={< logo/>}>
+        <Route path='/' element={<First/>}>
         </Route>
         <Route path='/login' element={<Login />}>
         </Route>
