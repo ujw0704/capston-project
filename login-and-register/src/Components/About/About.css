@@ -5,11 +5,13 @@
     width: auto;
     padding: 10px;
     border-radius: 10px;
+    background-color: snow;
 }
  
  li{
     margin: 10px;
     list-style: none;
+    box-shadow: 2px 3px 5px;
 }
 .containt ul {
     display: flex;
