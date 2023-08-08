@@ -1,11 +1,8 @@
 import React,{useState} from 'react'
 import "./Login.css"
 
-
-
-;
-
 function Login() {
+  const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
@@ -20,8 +17,8 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here, you can add your authentication logic, such as making an API call to a server.
-    // For this example, let's just simulate a successful login if the username and password are both "demo".
+    // Here, you can add your authentication logic, similar to your original code.
+    // For this example, let's simulate a successful login if the username and password are both "demo".
     if (username === 'demo' && password === 'demo') {
       setLoggedIn(true);
     } else {
@@ -29,41 +26,51 @@ function Login() {
     }
   };
 
-  if (loggedIn) {
-    return (
-      <div className='login'>
-        <h1>Welcome, {username}!</h1>
-        <button onClick={() => setLoggedIn(false)}>Logout</button>
-      </div>
-    );
-  }
-
   return (
-    <div className='login'>
-      <h1>Login Page</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={handleUsernameChange}
-          />
+    <div className='auth-page'>
+      {loggedIn ? (
+        <div className='auth-content'>
+          <h1>Welcome, {username}!</h1>
+          <button onClick={() => setLoggedIn(false)}>Logout</button>
         </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={handlePasswordChange}
-          />
+      ) : (
+        <div className='auth-content'>
+          <h1>{isLogin ? 'Login' : 'Register'} Page</h1>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor='username'>Username:</label>
+              <input
+                type='text'
+                id='username'
+                value={username}
+                onChange={handleUsernameChange}
+              />
+            </div>
+            <div>
+              <label htmlFor='password'>Password:</label>
+              <input
+                type='password'
+                id='password'
+                value={password}
+                onChange={handlePasswordChange}
+              />
+            </div>
+            <button type='submit'>{isLogin ? 'Login' : 'Register'}</button>
+          </form>
+          <p>
+            {isLogin
+              ? "Don't have an account? Click below to register."
+              : 'Already have an account? Click below to login.'}
+          </p>
+          <button onClick={() => setIsLogin(!isLogin)}>
+            {isLogin ? 'Register' : 'Login'}
+          </button>
         </div>
-        <button type="submit">Login</button>
-      </form>
+      )}
     </div>
   );
 }
+
+
 
 export default Login;

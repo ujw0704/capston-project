@@ -43,21 +43,18 @@
     
 }
 
-.header ul li{
-   
-   
-    border-radius:5px ;
+.header ul li {
+    border-radius: 5px;
     display: flex;
-    font-size:20px;
-     color: #fff; 
-    
-   justify-content: center;
-   font-weight: 50px;
-   font-size: medium;
-    
-    
-
-    
+    font-size: 20px;
+    padding: 10px 13px;
+    border: 1px solid gray;
+    color: #fff;
+    font-weight: 500;
+    justify-content: center;
+    font-weight: 50px;
+    font-size: medium;
+    background-color: aliceblue;
 }
 hover:li{
     border: 5px solid green;

@@ -4,7 +4,9 @@ import "./Register.css"
 function Register() {
   return (
     <div className='Registrer'>
-        <h1>Register</h1>
+        <h1>
+          
+        </h1>
 
 
         
