@@ -17,8 +17,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here, you can add your authentication logic, similar to your original code.
-    // For this example, let's simulate a successful login if the username and password are both "demo".
+    
     if (username === 'demo' && password === 'demo') {
       setLoggedIn(true);
     } else {
